@@ -34,7 +34,7 @@ pipeline {
            
         }
         
-       stage('4. Building Dockerfile'){
+       stage(' Building Dockerfile'){
           steps { 
 
                 sh  '''cp ${WORKSPACE}/target/hello-world-war-1.0.0.war ${WORKSPACE}
