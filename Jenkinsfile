@@ -26,7 +26,7 @@ pipeline {
         }
 
        stage('sonarqube'){
-            sh label: '', script: 'mvn verify sonar:sonar'
+            sh 'mvn verify sonar:sonar'
         }
         
 
