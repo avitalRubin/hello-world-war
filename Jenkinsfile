@@ -55,11 +55,11 @@ pipeline {
        
        stage(' Push image to Nexus'){
           steps {
-            sh '''docker login -u admin -p avital-win 192.168.0.14:8083 
-                                         docker tag java-app:${BUILD_ID} 192.168.0.14:8083/java-app:${BUILD_ID}
-                                         docker push 192.168.0.14:8083/java-app:${BUILD_ID}
-                                         docker rmi $(docker images --filter=reference="192.168.0.14:8083/java-app*" -q) -f
-                                         docker logout 192.168.0.14'''
+            sh '''docker login -u admin -p avital-win 192.168.0.6:8083 
+                                         docker tag java-app:${BUILD_ID} 192.168.0.6:8083/java-app:${BUILD_ID}
+                                         docker push 192.168.0.6:8083/java-app:${BUILD_ID}
+                                         docker rmi $(docker images --filter=reference="192.168.0.6:8083/java-app*" -q) -f
+                                         docker logout 192.168.0.6'''
              
           }
        }
